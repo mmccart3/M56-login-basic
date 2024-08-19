@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 async function registerUser(req,res) {
     try {
-        saltRounds = process.env.SALT_ROUNDS;
+        saltRounds = parseInt(process.env.SALT_ROUNDS);
         plainTextPassword = req.body.password;
         const hashedPassword = await bcrypt.hash(plainTextPassword, saltRounds);
         console.log(hashedPassword);
