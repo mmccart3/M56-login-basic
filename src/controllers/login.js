@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 
 async function login(req,res) {
     try {
-        const expirationTime = 1000 * 60 * 60 * 24 * 7;
+        const expirationTime = 60 * 60 * 24 * 7;
         const options = {
             expiresIn : expirationTime
         }
