@@ -4,6 +4,7 @@ const User = require("../db/models/users");
 async function checkToken(req,res,next) {
     try {
         const token = req.header("Authorization").replace("Bearer ","");
+        console.log(">>>",token)
         const privateKey = process.env.JWT_KEY;
         const decodedtoken = await jwt.verify(token,privateKey);
         console.log(decodedtoken);
