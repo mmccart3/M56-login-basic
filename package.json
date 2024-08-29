@@ -4,7 +4,8 @@
   "description": "Very very simple login server",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
   },
   "author": "M J McCarthy",
   "license": "ISC",
